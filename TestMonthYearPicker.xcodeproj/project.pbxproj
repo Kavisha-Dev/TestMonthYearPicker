@@ -13,6 +13,13 @@
 		750BD8382431CB2A004769AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750BD8362431CB2A004769AF /* Main.storyboard */; };
 		750BD83A2431CB2E004769AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750BD8392431CB2E004769AF /* Assets.xcassets */; };
 		750BD83D2431CB2E004769AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750BD83B2431CB2E004769AF /* LaunchScreen.storyboard */; };
+		750BD8452431CBBB004769AF /* MonthYearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD8442431CBBB004769AF /* MonthYearViewController.swift */; };
+		750BD8492431F7AB004769AF /* CustomUIPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD8482431F7AB004769AF /* CustomUIPicker.swift */; };
+		750BD84C2431F8C3004769AF /* ExampleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD84B2431F8C3004769AF /* ExampleTransitioningDelegate.swift */; };
+		750BD84E2431F917004769AF /* ExampleAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD84D2431F917004769AF /* ExampleAnimatedTransitioning.swift */; };
+		750BD8502431FC78004769AF /* CustomPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD84F2431FC78004769AF /* CustomPresentationViewController.swift */; };
+		750BD8522431FE27004769AF /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD8512431FE27004769AF /* PickerViewController.swift */; };
+		750BD8542431FFAE004769AF /* ExamplePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BD8532431FFAE004769AF /* ExamplePresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		750BD8392431CB2E004769AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		750BD83C2431CB2E004769AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		750BD83E2431CB2E004769AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750BD8442431CBBB004769AF /* MonthYearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearViewController.swift; sourceTree = "<group>"; };
+		750BD8482431F7AB004769AF /* CustomUIPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIPicker.swift; sourceTree = "<group>"; };
+		750BD84B2431F8C3004769AF /* ExampleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTransitioningDelegate.swift; sourceTree = "<group>"; };
+		750BD84D2431F917004769AF /* ExampleAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		750BD84F2431FC78004769AF /* CustomPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationViewController.swift; sourceTree = "<group>"; };
+		750BD8512431FE27004769AF /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		750BD8532431FFAE004769AF /* ExamplePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		750BD82F2431CB2A004769AF /* TestMonthYearPicker */ = {
 			isa = PBXGroup;
 			children = (
+				750BD84A2431F8AD004769AF /* Example */,
 				750BD8302431CB2A004769AF /* AppDelegate.swift */,
 				750BD8322431CB2A004769AF /* SceneDelegate.swift */,
 				750BD8342431CB2A004769AF /* ViewController.swift */,
@@ -63,8 +78,22 @@
 				750BD8392431CB2E004769AF /* Assets.xcassets */,
 				750BD83B2431CB2E004769AF /* LaunchScreen.storyboard */,
 				750BD83E2431CB2E004769AF /* Info.plist */,
+				750BD8442431CBBB004769AF /* MonthYearViewController.swift */,
+				750BD8482431F7AB004769AF /* CustomUIPicker.swift */,
 			);
 			path = TestMonthYearPicker;
+			sourceTree = "<group>";
+		};
+		750BD84A2431F8AD004769AF /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				750BD84F2431FC78004769AF /* CustomPresentationViewController.swift */,
+				750BD8512431FE27004769AF /* PickerViewController.swift */,
+				750BD8532431FFAE004769AF /* ExamplePresentationController.swift */,
+				750BD84B2431F8C3004769AF /* ExampleTransitioningDelegate.swift */,
+				750BD84D2431F917004769AF /* ExampleAnimatedTransitioning.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +167,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750BD8522431FE27004769AF /* PickerViewController.swift in Sources */,
 				750BD8352431CB2A004769AF /* ViewController.swift in Sources */,
+				750BD8502431FC78004769AF /* CustomPresentationViewController.swift in Sources */,
+				750BD8542431FFAE004769AF /* ExamplePresentationController.swift in Sources */,
+				750BD84E2431F917004769AF /* ExampleAnimatedTransitioning.swift in Sources */,
 				750BD8312431CB2A004769AF /* AppDelegate.swift in Sources */,
+				750BD84C2431F8C3004769AF /* ExampleTransitioningDelegate.swift in Sources */,
+				750BD8452431CBBB004769AF /* MonthYearViewController.swift in Sources */,
+				750BD8492431F7AB004769AF /* CustomUIPicker.swift in Sources */,
 				750BD8332431CB2A004769AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
