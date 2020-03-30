@@ -19,15 +19,29 @@ class CustomPresentationViewController: UIViewController {
     @IBAction func showPickerButtonTapped(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pvc = storyboard.instantiateViewController(withIdentifier: "PickerViewControllerId") as UIViewController
+        let pvc = storyboard.instantiateViewController(withIdentifier: "PickerViewControllerId") as UIViewController as! PickerViewController
         
         //let pvc = PickerViewController()
         pvc.modalPresentationStyle = UIModalPresentationStyle.custom
         pvc.transitioningDelegate = self
+        pvc.chosenMonthIndex = 2
+        pvc.chosenYearIndex = 3
+        
+        pvc.delegate = self
         
         self.present(pvc, animated: true, completion: nil)
         
     }
+    
+}
+
+extension CustomPresentationViewController: PickerViewControllerDoneDelegate {
+    
+    func onUserClickingDone(with index: UserSelectedIndex) {
+        print("User selected month index : \(index.monthIndex), year index : \(index.yearIndex)")
+    }
+    
+    
     
 }
 

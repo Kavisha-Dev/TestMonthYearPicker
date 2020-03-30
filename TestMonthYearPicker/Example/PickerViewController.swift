@@ -8,9 +8,33 @@
 
 import UIKit
 
+class UserSelectedIndex {
+    
+    var monthIndex: String = ""
+    var yearIndex: String = ""
+}
+
+protocol PickerViewControllerDoneDelegate {
+    func onUserClickingDone(with index: UserSelectedIndex)
+}
+
 class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var picker: UIPickerView!
+    
+    var chosenMonthIndex = 0
+    var chosenYearIndex = 0
+    
+    var customMonth = "Custom"
+    var customYearData = "All Notes"
+    
+    var months  = [String]()
+    var years   = [String]()
+    
+    var selectedMonth = ""
+    var selectedYear = ""
+    
+    var delegate: PickerViewControllerDoneDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +51,9 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         months  = monthList
         years   = ["2019", "2020", customYearData]
+        
+        picker.selectRow(chosenMonthIndex, inComponent: 0, animated: true)
+        picker.selectRow(chosenYearIndex, inComponent: 1, animated: true)
     }
     
     
@@ -36,19 +63,13 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     @IBAction func done(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
         
+        var selectedIndex = UserSelectedIndex()
+        selectedIndex.monthIndex = selectedMonth
+        selectedIndex.yearIndex = selectedYear
+        delegate?.onUserClickingDone(with: selectedIndex)
     }
-    
-    
-    var customMonth = "Custom"
-    var customYearData = "All Notes"
-    
-    var months  = [String]()
-    var years   = [String]()
-    
-    var selectedMonth = ""
-    var selectedYear = ""
-    
     
     
     
